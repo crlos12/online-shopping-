@@ -26,27 +26,27 @@ Projet de page web permettant l'achat d'articles dans  divers magasin.
 
 	1. Choisir le types d'articles ( Drogerie und körperpflege , Kleidung , Geräte und Elektonik , Auto und motorrad , Lebensmitttel und getränke )
 	2. Choisir le magasins  ( trouver les noms de magasins fictifs)
-	3. Creer les une base de donnes my sql sur pgadmin ( 
+	3. Creer  une base de donnes my sql sur pgadmin ( 
 	Nous aurons besoin ici de 7 tableaux  a savoir :                                                
 						
-	------> Utilisateur
+	------> Utilisateur/benutzer
     
 	Chaque utilisateur doit avoir : 
-	Une adresse email, un mot de passe , un nom , un prenom  et aucun de ces champs de devra etre vide 
+	Une adresse email(primary keys), un mot de passe , un nom , un prenom  et aucun de ces champs de devra etre vide  --------- not null
 	
-	------> Client 
+	------> Client /kunde 
             chaque client doit avoir :
             une adresse mail( clé primaire ) , un numero client , une adresse (RUE, numero de la rue , code postal , lieu ) , une date de naissance 
 !!Le tableau client doit etre connecter au tableau utlisateur par le biais de l'adresse mail 
 
-	-----> Commande 
+	-----> Commande/achats  
 	Chaque commande doit avoir :
 	Un numero de commande , und  date 
 	
 	------->Articles 
     
 	Chaque articles doit avoir :
-	Un identifiant (ID),une categorie, un genre ( food et non food ),un prix ( definie de facon,decimal )
+	Un identifiant (ID),une categorie, un genre ( food et non food ),un prix ( definie de facon decimal )
    Chaque articles doit avoir une referneces au tableau  categorie via catID
  
 	-------> Magasins 
@@ -57,7 +57,8 @@ Les magasins auront selon leur attribut des references a differnts articles.
                                                                              
 	--------> Categorie
 	Chaque tableau categorie doit avoir :
-	Un identifiant (catID), un genre , etre connecter au tableau 
+	Un identifiant (catID), un genre 
+
 	-------->Pagnier 
 	Chaque pannier doit avoir :
-Un identifiant ,une date de creation , l'adresse mail du client auquel il fait refernces via l'adresse mail.
+Un identifiant ,une date de creation , l'adresse mail  du client auquel il fait refernces via l'adresse mail.
